@@ -14,8 +14,8 @@ spec:
           app: testapp
      spec:
        containers:
-         - name: tomcat
-           image: tomcat
+         - name: newwebsite
+           image: akash1234karma/dockerfile
            ports:
              - containerPort: 8080
 
