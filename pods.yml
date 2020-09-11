@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysite
+  labels:
+    app: MyApp
+spec:
+  containers:
+  - name: mysite
+    image: akash1234karma/dockerfile
+    ports:
+     - containerPort: 8080
