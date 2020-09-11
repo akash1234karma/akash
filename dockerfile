@@ -1,6 +1,3 @@
-
-FROM nginx
-ADD . /usr/share/nginx/html
-
-
-
+FROM nginx 
+COPY index.html /var/www/html
+EXPOSE 80
