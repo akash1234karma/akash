@@ -1,4 +1,3 @@
-FROM nginx 
-COPY index.html /var/www/html
-EXPOSE 80
-ENTRYPOINT /usr/sbin/nginx -g 'daemon off;'
+FROM tomcat
+ADD . /var/www/html
+RUN apt-get update
