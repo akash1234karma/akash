@@ -1,6 +1,6 @@
 FROM ubuntu
-RUN apt-get install httpd -y
-COPY index.html /var/www/html/
+ADD . /var/www/html
+RUN apt-get update
+RUN apt-get install -y apache2
+CMD apachectl -D FOREGROUND
 
-CMD [“/usr/sbin/httpd”,” -D”,” FOREGROUND”]
-EXPOSE 80
