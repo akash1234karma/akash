@@ -1,3 +1,6 @@
-FROM httpd
-ADD . /var/www/html
-RUN apt-get update
+FROM ubuntu
+RUN apt-get install httpd -y
+COPY index.html /var/www/html/
+
+CMD [“/usr/sbin/httpd”,” -D”,” FOREGROUND”]
+EXPOSE 80
